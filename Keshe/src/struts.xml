@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+ 
+    <package name="user.action" extends="struts-default">
+    	<action name="addUser" class="user.action.UserAction"
+    		method="add">
+    		<result name="fail">/user/denglu2.jsp</result>
+    		<result name="success">/user/denglu3.jsp</result>
+    	</action>
+    	<action name="deleteUser" class="user.action.UserAction"
+    		method="delete">
+    		<result name="list" type="redirect">listUser</result>
+    	</action>
+    	<action name="editUser" class="user.action.UserAction"
+    		method="edit">
+    		<result name="edit">/user/change.jsp</result>
+    	</action>
+    	<action name="updateUser" class="user.action.UserAction"
+    		method="update">
+    		<result name="success">/user/myInform.jsp</result>
+    	</action>
+    	<action name="listUser" class="user.action.UserAction"
+    		method="list">
+    		<result name="listJsp">/user/denglu.jsp</result>
+    	</action>
+    	<action name="denglu" class="user.action.UserAction"
+    		method="denglu">
+    		<result name="success">/user/myInform.jsp</result>
+    		<result name="fail">/user/denglu1.jsp</result>
+    	</action>
+    	<action name="myInform" class="user.action.UserAction"
+    		method="myInform">
+    		<result name="myInformJsp">/user/myInform.jsp</result>
+    	</action>
+    	<action name="zhuce" class="user.action.UserAction"
+    		method="zhuce">
+    		<result name="tiaozhuan" type="redirect">/user/zhuce.jsp</result>
+    	</action>
+    	<action name="connect" class="user.action.UserAction"
+    		method="connect">
+    		<result name="connect" type="redirect">/user/connect.jsp</result>
+    	</action>
+    	<action name="searchUser" class="user.action.UserAction"
+    		method="search">
+    		<result name="searchJsp">/user/search.jsp</result>
+    	</action>
+    	<action name="hisInform" class="user.action.UserAction"
+    		method="hisInform">
+    		<result name="hisInformJsp">/user/hisInform.jsp</result>
+    	</action>
+    	<action name="delStu" class="user.action.UserAction"
+    		method="delStu">
+    		<result name="myInformJsp">/user/myInform.jsp</result>
+    	</action>
+    	<action name="addStuEnd" class="user.action.UserAction"
+    		method="addStuEnd">
+    		<result name="myInformJsp">/user/myInform.jsp</result>
+    	</action>
+    	<action name="addTcr" class="user.action.UserAction"
+    		method="addTcr">
+    		<result name="myInformJsp">/user/myInform.jsp</result>
+    	</action>
+    	<action name="addTcrStart" class="user.action.UserAction"
+    		method="addTcrStart">
+    		<result name="hisInformJsp">/user/hisInform.jsp</result>
+    	</action>
+    	<action name="message" class="user.action.UserAction"
+    		method="message">
+    		<result name="messageJsp">/user/message.jsp</result>
+    	</action>
+    	<action name="messageac" class="user.action.UserAction"
+    		method="messageac">
+    		<result name="messageJsp">/user/message.jsp</result>
+    	</action>
+    	<action name="messagedn" class="user.action.UserAction"
+    		method="messagedn">
+    		<result name="messageJsp">/user/message.jsp</result>
+    	</action>
+    	
+    	
+
+    </package>
+
+</struts>

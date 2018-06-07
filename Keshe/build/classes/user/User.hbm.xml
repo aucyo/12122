@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="user">
+    <class name="User" table="user">
+        <id name="id" column="id">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="email" />
+        <property name="name" />
+        <property name="password" />
+        <property name="phone" />
+        <property name="sex" />
+        <property name="birthday" />
+        <property name="school" />
+        <property name="professionaltitle" />
+        <property name="researcharea" />
+    </class>
+    <class name="Relationship" table="relationship">
+        <id name="id" column="id">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="email1" />
+        <property name="email2" />
+        <property name="start" />
+        <property name="end" />
+        <property name="state"/>
+    </class>
+</hibernate-mapping>
